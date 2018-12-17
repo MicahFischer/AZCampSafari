@@ -641,10 +641,6 @@ nav span:hover {
         width: 75%;
     }
 
-    .header {
-        -webkit-clip-path: none;
-        clip-path: none;
-    }
 }
 
 #backtop {
