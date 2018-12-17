@@ -491,10 +491,6 @@ nav span:hover {
     color: rgb(255, 255, 255);
     font-size: 38px;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
-    /* iOS layers fix */
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
 }
 
 /* The navigation menu links */
