@@ -28,7 +28,7 @@ nav {
     filter: drop-shadow(0 0 20px black);
     -webkit-filter: drop-shadow(0 0 20px black);
     -ms-filter: drop-shadow(0 0 20px black);
-    z-index: 100;
+    z-index: 99;
 }
 
 a {
@@ -474,7 +474,7 @@ nav span:hover {
     /* 0 width - change this with JavaScript */
     position: fixed;
     /* Stay in place */
-    z-index: 1000;
+    z-index: 99;
     /* Stay on top */
     top: 0;
     /* Stay at the top */
