@@ -474,7 +474,7 @@ nav span:hover {
     /* 0 width - change this with JavaScript */
     position: fixed;
     /* Stay in place */
-    z-index: 1;
+    z-index: 1000;
     /* Stay on top */
     top: 0;
     /* Stay at the top */
@@ -641,6 +641,10 @@ nav span:hover {
         width: 75%;
     }
 
+    .header {
+        -webkit-clip-path: none;
+        clip-path: none;
+    }
 }
 
 #backtop {
