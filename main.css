@@ -468,14 +468,14 @@ nav span:hover {
 
 /* The side navigation menu */
 .sidenav {
-    
+    position: relative;
     height: 100%;
     /* 100% Full-height */
     width: 0;
     /* 0 width - change this with JavaScript */
-    position: sticky;
+    position: fixed;
     /* Stay in place */
-    z-index: 100;
+    z-index: 99;
     /* Stay on top */
     top: 0;
     /* Stay at the top */
