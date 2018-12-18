@@ -28,7 +28,7 @@ nav {
     filter: drop-shadow(0 0 20px black);
     -webkit-filter: drop-shadow(0 0 20px black);
     -ms-filter: drop-shadow(0 0 20px black);
-    z-index: 99;
+    z-index: 100;
 }
 
 a {
@@ -63,26 +63,37 @@ nav a:hover {
     grid-template-rows: 1fr 2fr 2fr;
     -webkit-clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0% 0%);
     clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0% 0%);
+    position: relative;
+    z-index: -1;
 }
 
 #headeradventure {
     background-image: url("https://npca.s3.amazonaws.com/images/8706/591ff182-b7f9-4da1-9c16-c29e0ace3dc4-banner.jpg?1445970338");
     grid-template-rows: 1fr 2fr 2fr;
+    position: relative;
+    z-index: -1;
 }
 
 #headergallery {
     background-image: url("https://a30de2edae0c4b0bc6ba-a8477a60b1c5d9e290ed2e4c0d53743c.ssl.cf1.rackcdn.com/116/6/large.jpg");
     grid-template-rows: 1fr 2fr 2fr;
+    position: relative;
+    z-index: -1;
+
 }
 
 #headerstory {
     background-image: url("https://media.cntraveler.com/photos/594034815fff7e434a15efcf/master/pass/GettyImages-172750000.jpg");
     grid-template-rows: 1fr 2fr 2fr;
+    position: relative;
+    z-index: -1;
 }
 
 #headercontact {
     background-image: url("https://media.deseretdigital.com/file/aa89988589?type=jpeg&quality=55&c=15&a=4379240d");
     grid-template-rows: 1fr 2fr 2fr;
+    position: relative;
+    z-index: -1;
 }
 
 .header h1 {
@@ -93,11 +104,15 @@ nav a:hover {
     font-size: calc(32px + 5vw);
     border-radius: 40px;
     margin: 0;
+    position: relative;
+    z-index: -1;
 }
 
 .header hr {
     color: rgb(255, 255, 255);
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+    position: relative;
+    z-index: -1;
 }
 
 .header h2 {
@@ -107,6 +122,8 @@ nav a:hover {
     text-align: center;
     font-size: calc(16px + 2vw);
     margin: 0;
+    position: relative;
+    z-index: -1;
 
 }
 
@@ -437,6 +454,8 @@ footer {
     max-width: 140px;
     padding: .6vw 1.5vw;
     grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    z-index: -1;
 
 }
 
@@ -453,6 +472,10 @@ footer {
     margin: 0;
 }
 
+.mobile {
+    display: none;
+}
+
 footer a {
     color: white;
     text-decoration: none;
@@ -462,9 +485,73 @@ nav span:hover {
     color: rgb(233, 140, 87);
 }
 
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #282828;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    color: rgb(255, 255, 255);
+    font-size: 38px;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+}
 
-.mobile {
-    display: none;
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(144, 178, 189);
+    display: block;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: rgb(233, 140, 87);
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -501,18 +588,14 @@ nav span:hover {
         height: 24vw;
         float: left;
     }
+
+
 }
-
-
 
 /* Responsive Mobile Menu */
 @media only screen and (max-width: 800px) {
     nav a {
         display: none;
-    }
-
-    nav {
-        grid-template-columns: 1fr;
     }
 
     article form main {
@@ -526,14 +609,16 @@ nav span:hover {
         font-family: 'Nunito Sans', sans-serif;
     }
 
-    .mobile:hover a {
-        display: block;
-        border-radius: 0;
-        margin: 0 auto;
-    }
-
     nav {
         padding: 10px;
+    }
+
+    .sidenav {
+        height: 100vh;
+    }
+
+    .sidenav a:hover {
+        background: transparent;
     }
 
     article img.floatleft {
@@ -599,18 +684,3 @@ nav span:hover {
 #backtop:hover {
     background-color: #555;
 }
-
-@supports (-webkit-overflow-scrolling: touch) {
-    .header, #headeradventure, #headergallery, #headerstory, #headercontact {
-        background-attachment: scroll;
-    }
-  }
-  
-  @supports not (-webkit-overflow-scrolling: touch) {
-    .header, #headeradventure, #headergallery, #headerstory, #headercontact {
-        background-attachment: fixed;
-    }
-  }
-
-
-
