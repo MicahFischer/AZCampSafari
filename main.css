@@ -453,10 +453,6 @@ footer {
     margin: 0;
 }
 
-.mobile {
-    display: none;
-}
-
 footer a {
     color: white;
     text-decoration: none;
@@ -466,74 +462,9 @@ nav span:hover {
     color: rgb(233, 140, 87);
 }
 
-/* The side navigation menu */
-.sidenav {
-    position: relative;
-    height: 100%;
-    /* 100% Full-height */
-    width: 0;
-    /* 0 width - change this with JavaScript */
-    position: fixed;
-    /* Stay in place */
-    z-index: 99;
-    /* Stay on top */
-    top: 0;
-    /* Stay at the top */
-    left: 0;
-    background-color: #282828;
-    /* Black*/
-    overflow-x: hidden;
-    /* Disable horizontal scroll */
-    padding-top: 60px;
-    /* Place content 60px from the top */
-    transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidenav */
-    color: rgb(255, 255, 255);
-    font-size: 38px;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
-}
 
-/* The navigation menu links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: rgb(144, 178, 189);
-    display: block;
-    transition: 0.3s;
-    text-transform: uppercase;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: rgb(233, 140, 87);
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-
-    .sidenav a {
-        font-size: 18px;
-    }
+.mobile {
+    display: none;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -570,14 +501,18 @@ nav span:hover {
         height: 24vw;
         float: left;
     }
-
-
 }
+
+
 
 /* Responsive Mobile Menu */
 @media only screen and (max-width: 800px) {
     nav a {
         display: none;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
     }
 
     article form main {
@@ -591,16 +526,14 @@ nav span:hover {
         font-family: 'Nunito Sans', sans-serif;
     }
 
+    .mobile:hover a {
+        display: block;
+        border-radius: 0;
+        margin: 0 auto;
+    }
+
     nav {
         padding: 10px;
-    }
-
-    .sidenav {
-        height: 100vh;
-    }
-
-    .sidenav a:hover {
-        background: transparent;
     }
 
     article img.floatleft {
@@ -666,3 +599,18 @@ nav span:hover {
 #backtop:hover {
     background-color: #555;
 }
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .header, #headeradventure, #headergallery, #headerstory, #headercontact {
+        background-attachment: scroll;
+    }
+  }
+  
+  @supports not (-webkit-overflow-scrolling: touch) {
+    .header, #headeradventure, #headergallery, #headerstory, #headercontact {
+        background-attachment: fixed;
+    }
+  }
+
+
+
