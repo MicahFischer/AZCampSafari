@@ -684,3 +684,28 @@ nav span:hover {
 #backtop:hover {
     background-color: #555;
 }
+
+/* Set fixed scrolling to scroll on iOS devices. */
+@supports (-webkit-overflow-scrolling: touch) {
+
+    .header,
+    #headeradventure,
+    #headergallery,
+    #headerstory,
+    #headercontact,
+        {
+        background-attachment: scroll;
+    }
+}
+
+@supports not (-webkit-overflow-scrolling: touch) {
+
+    .header,
+    #headeradventure,
+    #headergallery,
+    #headerstory,
+    #headercontact,
+        {
+        background-attachment: fixed;
+    }
+}
