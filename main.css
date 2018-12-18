@@ -689,10 +689,10 @@ nav span:hover {
 @supports (-webkit-overflow-scrolling: touch) {
 
     .header,
-    #headeradventure,
-    #headergallery,
-    #headerstory,
-    #headercontact {
+    .header#headeradventure,
+    .header#headergallery,
+    .header#headerstory,
+    .header#headercontact {
         background-attachment: scroll;
     }
 }
@@ -700,10 +700,10 @@ nav span:hover {
 @supports not (-webkit-overflow-scrolling: touch) {
 
     .header,
-    #headeradventure,
-    #headergallery,
-    #headerstory,
-    #headercontact {
+    .header#headeradventure,
+    .header#headergallery,
+    .header#headerstory,
+    .header#headercontact {
         background-attachment: fixed;
     }
 }
