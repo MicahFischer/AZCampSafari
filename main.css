@@ -692,8 +692,7 @@ nav span:hover {
     #headeradventure,
     #headergallery,
     #headerstory,
-    #headercontact,
-        {
+    #headercontact {
         background-attachment: scroll;
     }
 }
@@ -704,8 +703,7 @@ nav span:hover {
     #headeradventure,
     #headergallery,
     #headerstory,
-    #headercontact,
-        {
+    #headercontact {
         background-attachment: fixed;
     }
 }
