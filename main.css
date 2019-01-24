@@ -481,6 +481,10 @@ footer a {
     text-decoration: none;
 }
 
+footer a img {
+    width: 40px;
+}
+
 nav span:hover {
     color: rgb(233, 140, 87);
 }
