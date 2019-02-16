@@ -18,7 +18,7 @@ body {
 nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     position: fixed;
     top: 0;
@@ -55,6 +55,7 @@ nav a:hover {
 
 /* Header Home Page */
 .header {
+    margin-top: 70px;
     background-image: url("https://images.pexels.com/photos/259672/pexels-photo-259672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     height: 700px;
     background-attachment: fixed;
