@@ -20,7 +20,7 @@ nav {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     max-width: 1200px;
     margin: 0 auto;
-    position: sticky;
+    position: fixed;
     top: 0;
     background-color: rgb(43, 37, 33);
     border-bottom-left-radius: 20px;
