@@ -64,21 +64,21 @@ nav a:hover {
     -webkit-clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0% 0%);
     clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0% 0%);
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 #headeradventure {
     background-image: url("https://npca.s3.amazonaws.com/images/8706/591ff182-b7f9-4da1-9c16-c29e0ace3dc4-banner.jpg?1445970338");
     grid-template-rows: 1fr 2fr 2fr;
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 #headergallery {
     background-image: url("https://a30de2edae0c4b0bc6ba-a8477a60b1c5d9e290ed2e4c0d53743c.ssl.cf1.rackcdn.com/116/6/large.jpg");
     grid-template-rows: 1fr 2fr 2fr;
     position: relative;
-    z-index: -1;
+    z-index: 1;
 
 }
 
@@ -86,14 +86,14 @@ nav a:hover {
     background-image: url("https://media.cntraveler.com/photos/594034815fff7e434a15efcf/master/pass/GettyImages-172750000.jpg");
     grid-template-rows: 1fr 2fr 2fr;
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 #headercontact {
     background-image: url("https://media.deseretdigital.com/file/aa89988589?type=jpeg&quality=55&c=15&a=4379240d");
     grid-template-rows: 1fr 2fr 2fr;
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 .header h1 {
@@ -128,6 +128,7 @@ nav a:hover {
 }
 
 .header a {
+    position: relative;
     background-color: rgba(43, 37, 33, 0.75);
     display: block;
     border: 3px solid white;
@@ -497,7 +498,7 @@ nav span:hover {
     /* 0 width - change this with JavaScript */
     position: fixed;
     /* Stay in place */
-    z-index: 1;
+    z-index: 100;
     /* Stay on top */
     top: 0;
     /* Stay at the top */
